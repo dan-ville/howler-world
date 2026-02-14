@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(where:*)",
+      "Bash(ls:*)",
+      "WebSearch",
+      "WebFetch(domain:red-rising.fandom.com)"
+    ]
+  }
+}
