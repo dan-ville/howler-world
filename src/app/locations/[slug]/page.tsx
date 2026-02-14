@@ -33,8 +33,8 @@ export default function LocationDetailPage({ params }: PageProps) {
         &larr; All Locations
       </Link>
 
-      <div className="rounded-lg border border-gold/20 bg-obsidian-light p-8">
-        <h1 className="mb-1 text-3xl font-bold text-gray-100">
+      <div className="glass-card p-8">
+        <h1 className="mb-1 font-heading text-3xl font-bold text-gray-100">
           {location.name}
         </h1>
         <p className="mb-6 text-sm font-medium text-mars-red-light uppercase tracking-wide">
@@ -47,7 +47,8 @@ export default function LocationDetailPage({ params }: PageProps) {
 
         {location.notableEvents.length > 0 && (
           <div className="mb-6">
-            <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+            <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+              <span className="h-px w-4 bg-gold/30" />
               Notable Events
             </h2>
             <ul className="space-y-2">
@@ -63,14 +64,15 @@ export default function LocationDetailPage({ params }: PageProps) {
 
         {location.associatedCharacters.length > 0 && (
           <div>
-            <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+            <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+              <span className="h-px w-4 bg-gold/30" />
               Associated Characters
             </h2>
             <div className="flex flex-wrap gap-2">
               {location.associatedCharacters.map((name) => (
                 <span
                   key={name}
-                  className="rounded bg-obsidian px-2 py-1 text-sm text-gray-300"
+                  className="rounded-md border border-white/[0.06] bg-white/[0.04] px-2 py-1 text-sm text-gray-300"
                 >
                   {name}
                 </span>

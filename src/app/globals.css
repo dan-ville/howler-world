@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-obsidian-dark text-gray-100;
+  @apply bg-obsidian-dark text-gray-100 font-body;
+  background-image:
+    radial-gradient(ellipse 600px 400px at 20% 10%, rgba(201, 168, 76, 0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 80% 50%, rgba(201, 168, 76, 0.02) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 90%, rgba(192, 57, 43, 0.03) 0%, transparent 70%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.5);
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-lg border border-white/[0.06] bg-white/[0.04] backdrop-blur-md;
+  }
+
+  .gradient-border {
+    @apply relative rounded-lg;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.3), transparent 60%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 30px rgba(201, 168, 76, 0.2), 0 0 60px rgba(201, 168, 76, 0.1);
+  }
 }

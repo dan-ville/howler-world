@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+      },
       colors: {
         // Sampled from the official Colored Society pyramid
         gold: { DEFAULT: "#C9A84C", light: "#E2CA7A", dark: "#9A7A2E" },
@@ -25,6 +29,20 @@ const config: Config = {
         "rr-pink": { DEFAULT: "#C98090", light: "#DCA0AD", dark: "#A06070" },
         red: { DEFAULT: "#943030", light: "#B84848", dark: "#6E2020" },
         "mars-red": { DEFAULT: "#C0392B", light: "#E74C3C", dark: "#922B21" },
+      },
+      keyframes: {
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
       },
     },
   },

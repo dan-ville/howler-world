@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function LocationsPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-gold">Locations</h1>
+      <h1 className="mb-2 font-heading text-3xl font-bold text-gold">Locations</h1>
       <p className="mb-8 text-gray-400">
         Worlds, moons, and key locations across the solar system.
       </p>
@@ -21,9 +21,9 @@ export default function LocationsPage() {
           <Link
             key={location.slug}
             href={`/locations/${location.slug}`}
-            className="group rounded-lg border border-gold/20 bg-obsidian-light p-5 transition-all hover:border-gold/50 hover:shadow-lg hover:shadow-gold/5"
+            className="glass-card gradient-border group p-5 transition-all duration-300 hover:bg-white/[0.06] hover:shadow-lg hover:shadow-gold/5"
           >
-            <h3 className="mb-1 text-lg font-bold text-gray-100 group-hover:text-gold">
+            <h3 className="mb-1 font-heading text-lg font-bold text-gray-100 group-hover:text-gold transition-colors">
               {location.name}
             </h3>
             <p className="mb-3 text-xs font-medium text-mars-red-light uppercase tracking-wide">

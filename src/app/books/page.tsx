@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-gold">The Saga</h1>
+      <h1 className="mb-2 font-heading text-3xl font-bold text-gold">The Saga</h1>
       <p className="mb-8 text-gray-400">
         All six books of Pierce Brown&apos;s Red Rising saga — the original
         trilogy and the Iron Gold trilogy.
@@ -22,14 +22,14 @@ export default function BooksPage() {
           <Link
             key={book.slug}
             href={`/books/${book.slug}`}
-            className="group block rounded-lg border border-gold/20 bg-obsidian-light p-6 transition-all hover:border-gold/50 hover:shadow-lg hover:shadow-gold/5"
+            className="glass-card gradient-border group block p-6 transition-all duration-300 hover:bg-white/[0.06] hover:shadow-lg hover:shadow-gold/5"
           >
             <div className="mb-2 flex items-center gap-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-obsidian-dark">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold/90 text-sm font-bold text-obsidian-dark ring-2 ring-gold/20">
                 {book.position}
               </span>
               <div>
-                <h2 className="text-xl font-bold text-gray-100 group-hover:text-gold">
+                <h2 className="font-heading text-xl font-bold text-gray-100 group-hover:text-gold transition-colors">
                   {book.title}
                 </h2>
                 <p className="text-xs text-gray-500">
@@ -44,7 +44,7 @@ export default function BooksPage() {
               {book.themes.slice(0, 3).map((theme) => (
                 <span
                   key={theme}
-                  className="rounded bg-obsidian px-2 py-1 text-xs text-gray-400"
+                  className="rounded-md border border-white/[0.06] bg-white/[0.04] px-2 py-1 text-xs text-gray-400"
                 >
                   {theme}
                 </span>

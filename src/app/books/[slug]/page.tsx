@@ -33,33 +33,35 @@ export default function BookDetailPage({ params }: PageProps) {
         &larr; All Books
       </Link>
 
-      <div className="rounded-lg border border-gold/20 bg-obsidian-light p-8">
+      <div className="glass-card p-8">
         <div className="mb-6 flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-lg font-bold text-obsidian-dark">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/90 text-lg font-bold text-obsidian-dark ring-2 ring-gold/20">
             {book.position}
           </span>
           <div>
-            <h1 className="text-3xl font-bold text-gray-100">{book.title}</h1>
+            <h1 className="font-heading text-3xl font-bold text-gray-100">{book.title}</h1>
             <p className="text-sm text-gray-500">Published {book.year}</p>
           </div>
         </div>
 
         <div className="mb-8">
-          <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+            <span className="h-px w-4 bg-gold/30" />
             Synopsis
           </h2>
           <p className="leading-relaxed text-gray-300">{book.synopsis}</p>
         </div>
 
         <div className="mb-6">
-          <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+            <span className="h-px w-4 bg-gold/30" />
             Major Characters
           </h2>
           <div className="flex flex-wrap gap-2">
             {book.majorCharacters.map((name) => (
               <span
                 key={name}
-                className="rounded bg-obsidian px-2 py-1 text-sm text-gray-300"
+                className="rounded-md border border-white/[0.06] bg-white/[0.04] px-2 py-1 text-sm text-gray-300"
               >
                 {name}
               </span>
@@ -68,7 +70,8 @@ export default function BookDetailPage({ params }: PageProps) {
         </div>
 
         <div className="mb-6">
-          <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+            <span className="h-px w-4 bg-gold/30" />
             Key Events
           </h2>
           <ul className="space-y-2">
@@ -82,14 +85,15 @@ export default function BookDetailPage({ params }: PageProps) {
         </div>
 
         <div>
-          <h2 className="mb-3 text-sm font-semibold text-gold uppercase tracking-wide">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold uppercase tracking-wide">
+            <span className="h-px w-4 bg-gold/30" />
             Themes
           </h2>
           <div className="flex flex-wrap gap-2">
             {book.themes.map((theme) => (
               <span
                 key={theme}
-                className="rounded border border-gold/30 bg-obsidian px-2 py-1 text-sm text-gray-300"
+                className="rounded-md border border-gold/15 bg-gold/[0.04] px-2 py-1 text-sm text-gray-300"
               >
                 {theme}
               </span>

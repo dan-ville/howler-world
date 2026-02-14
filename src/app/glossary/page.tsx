@@ -25,7 +25,7 @@ export default function GlossaryPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-gold">Glossary</h1>
+      <h1 className="mb-2 font-heading text-3xl font-bold text-gold">Glossary</h1>
       <p className="mb-8 text-gray-400">
         Key terms, concepts, and institutions from the Red Rising universe,
         alphabetically organized.
@@ -37,7 +37,7 @@ export default function GlossaryPage() {
           <a
             key={letter}
             href={`#letter-${letter}`}
-            className="flex h-8 w-8 items-center justify-center rounded bg-obsidian-light text-sm font-bold text-gray-400 transition-colors hover:bg-gold hover:text-obsidian-dark"
+            className="flex h-8 w-8 items-center justify-center rounded-md border border-white/[0.06] bg-white/[0.04] text-sm font-bold text-gray-400 backdrop-blur-sm transition-all hover:border-gold/30 hover:bg-gold/10 hover:text-gold hover:shadow-sm hover:shadow-gold/10"
           >
             {letter}
           </a>
@@ -48,13 +48,14 @@ export default function GlossaryPage() {
       <div className="space-y-10">
         {letters.map((letter) => (
           <section key={letter} id={`letter-${letter}`}>
-            <h2 className="mb-4 border-b border-gold/20 pb-2 text-xl font-bold text-gold">
+            <h2 className="mb-4 pb-2 font-heading text-xl font-bold text-gold">
               {letter}
+              <span className="mt-2 block h-px bg-gradient-to-r from-gold/30 to-transparent" />
             </h2>
             <div className="space-y-6">
               {grouped[letter].map((entry) => (
                 <div key={entry.term}>
-                  <h3 className="mb-1 text-lg font-semibold text-gray-100">
+                  <h3 className="mb-1 font-heading text-lg font-semibold text-gray-100">
                     {entry.term}
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-300">

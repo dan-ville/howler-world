@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ColorsPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="mb-2 text-3xl font-bold text-gold">
+      <h1 className="mb-2 font-heading text-3xl font-bold text-gold">
         The Color Hierarchy
       </h1>
       <p className="mb-8 text-gray-400">
@@ -24,7 +24,7 @@ export default function ColorsPage() {
         {colors.map((colorInfo) => (
           <div
             key={colorInfo.color}
-            className="overflow-hidden rounded-lg border border-gold/10 bg-obsidian-light"
+            className="glass-card overflow-hidden"
           >
             <div className="flex flex-col sm:flex-row">
               {/* Color bar */}
@@ -32,7 +32,7 @@ export default function ColorsPage() {
                 className={`flex items-center justify-center px-6 py-3 sm:w-40 sm:py-0 ${colorInfo.cssClass}`}
               >
                 <div className="text-center">
-                  <span className="text-lg font-bold">{colorInfo.color}</span>
+                  <span className="font-heading text-lg font-bold">{colorInfo.color}</span>
                 </div>
               </div>
 

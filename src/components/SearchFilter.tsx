@@ -61,12 +61,12 @@ export default function SearchFilter({ characters }: SearchFilterProps) {
           placeholder="Search by name or alias..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 rounded-lg border border-gold/30 bg-obsidian px-4 py-2 text-gray-100 placeholder-gray-500 outline-none focus:border-gold"
+          className="flex-1 rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-2 text-gray-100 placeholder-gray-500 outline-none backdrop-blur-sm transition-all focus:border-gold/40 focus:ring-1 focus:ring-gold/20"
         />
         <select
           value={selectedColor}
           onChange={(e) => setSelectedColor(e.target.value as Color | "")}
-          className="rounded-lg border border-gold/30 bg-obsidian px-4 py-2 text-gray-100 outline-none focus:border-gold"
+          className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-2 text-gray-100 outline-none backdrop-blur-sm transition-all focus:border-gold/40 focus:ring-1 focus:ring-gold/20"
         >
           <option value="">All Colors</option>
           {usedColors.map((color) => (
@@ -78,7 +78,7 @@ export default function SearchFilter({ characters }: SearchFilterProps) {
         <select
           value={selectedBook}
           onChange={(e) => setSelectedBook(e.target.value as BookTitle | "")}
-          className="rounded-lg border border-gold/30 bg-obsidian px-4 py-2 text-gray-100 outline-none focus:border-gold"
+          className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-2 text-gray-100 outline-none backdrop-blur-sm transition-all focus:border-gold/40 focus:ring-1 focus:ring-gold/20"
         >
           <option value="">All Books</option>
           {ALL_BOOKS.map((book) => (
