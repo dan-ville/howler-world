@@ -6,7 +6,11 @@
       "Bash(where:*)",
       "Bash(ls:*)",
       "WebSearch",
-      "WebFetch(domain:red-rising.fandom.com)"
+      "WebFetch(domain:red-rising.fandom.com)",
+      "WebFetch(domain:www.solarsystemscope.com)",
+      "Bash(curl:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/nodejs:/c/Users/DandyBear/AppData/Roaming/npm\")",
+      "Bash(npx next build)"
     ]
   }
 }
